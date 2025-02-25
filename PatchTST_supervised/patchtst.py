@@ -176,7 +176,7 @@ class Trainer():
                 preds.append(pred)
                 trues.append(true)
                 inputx.append(batch_x.detach().cpu().numpy())
-                if i % 20 == 0:
+                if i % 10 == 0:
                     input = batch_x.detach().cpu().numpy()
                     gt = np.concatenate((input[0, :, -1], true[0, :, -1]), axis=0) # input 마지막 column = target feature
                     pd = np.concatenate((input[0, :, -1], pred[0, :, -1]), axis=0)
